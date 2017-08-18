@@ -934,17 +934,16 @@
 
                     if (scope.calType == 'jalali')
                         _standValue = ADMdtpFactory.convertToJalali(_standValue);
-
-                    admDtp.fillDays(_standValue, !scope.option.transition);
                     
-                    scope.$applyAsync(function() {
-                        for (var i = 0; i < scope.current.days.length; i++) {
-                            if (scope.current.days[i].today) {
-                                scope.selectThisDay(scope.current.days[i]);
-                                break;
-                            }
+                    for (var i = 0; i < scope.current.days.length; i++) {
+                        if (scope.current.days[i].today) {
+                            scope.selectThisDay(scope.current.days[i]);
+                            break;
                         }
-                    });
+                    }
+                    
+                    admDtp.fillDays(_standValue, !scope.option.transition);
+        
                 }
 
                 scope.changeTimeValue = function(variable, value) {
