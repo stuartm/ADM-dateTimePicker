@@ -941,8 +941,9 @@
                             break;
                         }
                     }
-                    
-                    admDtp.fillDays(_standValue, !scope.option.transition);
+                    $timeout(function() {
+                        admDtp.fillDays(_standValue, !scope.option.transition);
+                    },0);
         
                 }
 
