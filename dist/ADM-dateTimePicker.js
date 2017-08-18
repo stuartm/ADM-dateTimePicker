@@ -940,7 +940,7 @@
                     
                     for (var i = 0; i < scope.current.days.length; i++) {
                         if (scope.current.days[i].today) {
-                            selectThisDay(scope.current.days[i]);
+                            scope.selectThisDay(scope.current.days[i]);
                             break;
                         }
                     }
