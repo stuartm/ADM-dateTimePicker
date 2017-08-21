@@ -930,7 +930,8 @@
                 }
                 
                 scope.today = function() {
-                    var _standValue = new Date().setHours(0,0,0,0);
+                    var _standValue = new Date();
+                    _standValue.setHours(0,0,0,0);
 
                     if (scope.calType == 'jalali')
                         _standValue = ADMdtpFactory.convertToJalali(_standValue);
