@@ -938,7 +938,7 @@
                     admDtp.fillDays(_standValue, !scope.option.transition);
                     
                     $timeout(function() {
-                        $scope.$applyAsync(function() {
+                        scope.$applyAsync(function() {
                             for (var i = 0; i < scope.current.days.length; i++) {
                                 if (scope.current.days[i].today) {
                                     scope.selectThisDay(scope.current.days[i]);
