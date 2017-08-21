@@ -931,10 +931,7 @@
                 
                 scope.today = function() {
                     var _standValue = new Date();
-                    _standValue.setHours(0,0,0,0);
-
-                    if (scope.calType == 'jalali')
-                        _standValue = ADMdtpFactory.convertToJalali(_standValue);
+                    _standValue.setUTCHours(0,0,0,0);
                     
                     var _day = {
                         day: _standValue.getDate(),
@@ -951,6 +948,9 @@
                     }
                     
                     scope.selectThisDay(_day);
+                    
+                    if (scope.calType == 'jalali')
+                        _standValue = ADMdtpFactory.convertToJalali(_standValue);
                     
                     $timeout(function() {
                         admDtp.fillDays(_standValue, !scope.option.transition);
