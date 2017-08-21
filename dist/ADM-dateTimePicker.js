@@ -939,7 +939,7 @@
                         day: _standValue.getDate(),
                         month: _standValue.getMonth()+1,
                         year: _standValue.getFullYear(),
-                        dayName: _standValue.getDay() + (($scope.calType=='jalali')?1:0),
+                        dayName: _standValue.getDay() + ((scope.calType=='jalali')?1:0),
                         fullDate: _standValue,
                         disable: false,
                         today: true,
